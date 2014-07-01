@@ -3,7 +3,7 @@ Klink - A Sphinx Theme
 
 Sphinx is a **simple** and **clean** theme for creating `Sphinx docs
 <http://sphinx-doc.org/>`__. It is heavily inspired by the beautiful `jrnl's theme
-<https://github.com/maebert/jrnl>`__. It also supports embedding `AIPython
+<https://github.com/maebert/jrnl>`__. It also supports embedding `IPython
 Notebooks <http://ipython.org/notebook.html>`__ which can be mighty useful.
 
 Installation
