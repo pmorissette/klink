@@ -1,5 +1,9 @@
-.PHONY: css serve
+.PHONY: clean css docs serve
 
+clean:
+	- rm -rf build
+	- rm -rf dist
+	- rm -rf klink.egg-info
 
 css:
 	lessc --clean-css klink/less/klink.less klink/static/css/klink.css
