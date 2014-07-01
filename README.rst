@@ -1,7 +1,7 @@
-Klink - A simple, clean Sphinx docs theme
-=========================================
+Klink - A Sphinx Theme
+======================
 
-Sphinx is a simple and clean theme for creating `Sphinx docs
+Sphinx is a **simple** and **clean** theme for creating `Sphinx docs
 <http://sphinx-doc.org/>`__. It is heavily inspired by the beautiful `jrnl's theme
 <https://github.com/maebert/jrnl>`__. 
 
@@ -47,9 +47,7 @@ following code to your **conf.py**:
 Once the conversion is done, you will have a .rst file with the same name as
 each one of your notebooks.
 
-.. note::
-
-    Place your notebooks in your docs' source dir.
+*Note: place your notebooks in your docs' source dir.*
 
 Now all you have to do is use the **include** command to insert them into your
 docs.
