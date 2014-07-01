@@ -12,7 +12,8 @@ Klink is a simple sphinx theme. It is heavily inspired by `jrnl's theme
 Options
 -------
 
-Here are the theme options:
+Here are the theme options. They should be added to the html_theme_options in
+your **conf.py** file.
 
     * **github**
       The github address of the project. The format is name/project

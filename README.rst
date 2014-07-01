@@ -1,5 +1,9 @@
-Installation Guide
-==================
+Klink - A simple, clean Sphinx docs theme
+=========================================
+
+Sphinx is a simple and clean theme for creating `Sphinx docs
+<http://sphinx-doc.org/>`__. It is heavily inspired by the beautiful `jrnl's theme
+<https://github.com/maebert/jrnl>`__. 
 
 Installation
 ------------
@@ -49,3 +53,18 @@ each one of your notebooks.
 
 Now all you have to do is use the **include** command to insert them into your
 docs.
+
+Options
+-------
+
+Here are the theme options. They should be added to the html_theme_options in
+your **conf.py** file.
+
+    * **github**
+      The github address of the project. The format is name/project
+      (pmorissette/klink).
+    * **logo**
+      The logo file. Assumed to be in _static. Default is logo.png. The logo
+      should be 150x150.
+    * **analytics_id**
+      Your Google Analytics id (usually starts with UA-...)
