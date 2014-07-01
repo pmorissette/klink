@@ -45,7 +45,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'klink'
-copyright = u'2014, Philippe Morissette'
+copyright = u'klink was created by Philippe Morissette. If you find a bug, please <a href="https://github.com/pmorissette/klink/issues/new" title="Open a new issue on Github">submit an issue</a> on Github.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
