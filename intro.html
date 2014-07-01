@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>klink - A Simple Sphinx Theme &mdash; klink 0.1 documentation</title>
+    <title>Including IPython Notebook &mdash; klink 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/css/klink.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,8 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="klink 0.1 documentation" href="#" />
-    <link rel="next" title="klink - A Simple Sphinx Theme" href="" />
+    <link rel="top" title="klink 0.1 documentation" href="index.html" />
          
         <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
         
@@ -39,35 +38,8 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="klink-a-simple-sphinx-theme">
-<h1>klink - A Simple Sphinx Theme<a class="headerlink" href="#klink-a-simple-sphinx-theme" title="Permalink to this headline">¶</a></h1>
-<p>Klink is a simple sphinx theme. It is heavily inspired by <a class="reference external" href="https://github.com/maebert/jrnl">jrnl&#8217;s theme</a>.</p>
-<div class="section" id="options">
-<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<p>Here are the theme options. They should be added to the html_theme_options in
-your <strong>conf.py</strong> file.</p>
-<blockquote>
-<div><ul class="simple">
-<li><strong>github</strong>
-The github address of the project. The format is name/project
-(pmorissette/klink).</li>
-<li><strong>logo</strong>
-The logo file. Assumed to be in _static. Default is logo.png. The logo
-should be 150x150.</li>
-<li><strong>analytics_id</strong>
-Your Google Analytics id (usually starts with UA-...)</li>
-</ul>
-</div></blockquote>
-</div>
-<div class="section" id="python-code">
-<h2>Python Code<a class="headerlink" href="#python-code" title="Permalink to this headline">¶</a></h2>
-<p>Here is a quick example on how you would insert a IPython Notebook. Everything
-you see below here in this section is actually a Notebook that was converted to
-a .rst file for inclusion. Klink&#8217;s convert_notebooks() does the conversion.  All
-you have to do is include the .rst file. It will have the same name as the
-notebook.</p>
-<div class="section" id="including-ipython-notebook">
-<h3>Including IPython Notebook<a class="headerlink" href="#including-ipython-notebook" title="Permalink to this headline">¶</a></h3>
+  <div class="section" id="including-ipython-notebook">
+<h1>Including IPython Notebook<a class="headerlink" href="#including-ipython-notebook" title="Permalink to this headline">¶</a></h1>
 <p>With the klink helper function <strong>convertnbs()</strong>, all notebooks will be
 converted to .rst so that they can be included in your docs. This
 includes all output including images. It&#8217;s a very convenient way to
@@ -88,7 +60,7 @@ create Python docs!</p>
 </div>
 </div>
 <div class="section" id="mardown">
-<h3>Mardown<a class="headerlink" href="#mardown" title="Permalink to this headline">¶</a></h3>
+<h1>Mardown<a class="headerlink" href="#mardown" title="Permalink to this headline">¶</a></h1>
 <p>IPython currently supports markdown cells. These are converted to the
 appropriate .rst type by the klink helper function. The function calls
 ipython&#8217;s nbconvert with the <strong>&#8211;to rst</strong> option. You will need an
@@ -99,10 +71,6 @@ up-to-date version of pandoc for this to work properly.</p>
 <div class="highlight-python"><pre>&lt;matplotlib.axes.AxesSubplot at 0x7f28246381d0&gt;</pre>
 </div>
 <img alt="_images/intro_4_1.png" class="pynb" src="_images/intro_4_1.png" />
-<div class="toctree-wrapper compound">
-</div>
-</div>
-</div>
 </div>
 
 
@@ -112,16 +80,12 @@ up-to-date version of pandoc for this to work properly.</p>
         <aside>
 
             
-            <a href="#" id="logo" title=klink><img class="logo" src="_static/logo.png" width="150px" height="150px" title=klink /></a>
+            <a href="index.html" id="logo" title=klink><img class="logo" src="_static/logo.png" width="150px" height="150px" title=klink /></a>
             
             
             <h2>Documentation</h2>
-            <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python-code">Python Code</a></li>
-</ul>
-</li>
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="klink.html">API</a></li>
 </ul>
