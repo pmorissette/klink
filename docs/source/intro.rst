@@ -1,13 +1,6 @@
 
-How To
-~~~~~~
-
-With the klink helper function **convert\_notebooks()**, all notebooks
-will be converted to .rst so that they can be included in your docs.
-This includes all output including images. It's a very convenient way to
-create Python docs! All you have to do is create notebooks within your
-source directory (same directory as your conf.py file). Then, you add a
-call to klink.convert\_notebooks() in your conf.py.
+A Quick Example
+~~~~~~~~~~~~~~~
 
 Here is a quick example of what it looks like. I am writing this in my
 notebook file by the way (using a Mardown cell).

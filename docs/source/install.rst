@@ -6,7 +6,7 @@ Installation
 
 Assuming you have pip installed:
 
-.. code:: bash
+.. code:: sh
 
     $ pip install klink
 
@@ -61,7 +61,7 @@ the LESS files themselves. You will also need lessc to convert from less to css.
 See the css command in the Makefile for an example. 
 
 You will also need to change your conf.py file. The following settings should
-work:
+work::
 
     html_theme = 'klink'
     html_theme_path ['_themes']
@@ -70,3 +70,4 @@ work:
         'analytics_id': 'UA-your-number-here',
         'logo': 'logo.png'
     }
+
