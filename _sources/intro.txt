@@ -18,6 +18,7 @@ create Python docs!
     print np.random.randn(20)
 
 .. parsed-literal::
+    :class: pynb-result
 
     [-0.81256785 -1.16630768  0.27555802  0.57729188 -0.64691411  0.62288591
       0.27943851  0.10512695  0.23808598 -1.45293996 -0.24394825 -0.14631097
@@ -40,6 +41,7 @@ up-to-date version of pandoc for this to work properly.
 
 
 .. parsed-literal::
+    :class: pynb-result
 
     <matplotlib.axes.AxesSubplot at 0x7f28246381d0>
 
@@ -47,5 +49,5 @@ up-to-date version of pandoc for this to work properly.
 
 
 .. image:: _static/intro_4_1.png
-	:class: pynb
+    :class: pynb
 

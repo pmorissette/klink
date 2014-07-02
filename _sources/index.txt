@@ -28,8 +28,8 @@ Python Code
 -----------
 
 Here is a quick example on how you would insert a IPython Notebook. Everything
-you see below here in this section is actually a Notebook that was converted to
-a .rst file for inclusion. Klink's convert_notebooks() does the conversion.  All
+you see below this paragraph is actually a Notebook that was converted to
+a .rst file for inclusion in this document. Klink's convert_notebooks() does the conversion.  All
 you have to do is include the .rst file. It will have the same name as the
 notebook.
 
