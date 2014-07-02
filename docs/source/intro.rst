@@ -1,11 +1,16 @@
 
-Including IPython Notebook
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+How To
+~~~~~~
 
-With the klink helper function **convertnbs()**, all notebooks will be
-converted to .rst so that they can be included in your docs. This
-includes all output including images. It's a very convenient way to
-create Python docs!
+With the klink helper function **convert\_notebooks()**, all notebooks
+will be converted to .rst so that they can be included in your docs.
+This includes all output including images. It's a very convenient way to
+create Python docs! All you have to do is create notebooks within your
+source directory (same directory as your conf.py file). Then, you add a
+call to klink.convert\_notebooks() in your conf.py.
+
+Here is a quick example of what it looks like. I am writing this in my
+notebook file by the way (using a Mardown cell).
 
 .. code:: python
 
@@ -30,9 +35,9 @@ Mardown
 ~~~~~~~
 
 IPython currently supports markdown cells. These are converted to the
-appropriate .rst type by the klink helper function. The function calls
-ipython's nbconvert with the **--to rst** option. You will need an
-up-to-date version of pandoc for this to work properly.
+appropriate .rst type by the klink helper function (h1, h2, p, etc.).
+The function calls IPython's nbconvert with the **--to rst** option. You
+will need an up-to-date version of pandoc for this to work properly.
 
 .. code:: python
 
