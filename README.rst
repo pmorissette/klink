@@ -6,6 +6,8 @@ Klink is a **simple** and **clean** theme for creating `Sphinx docs
 <https://github.com/maebert/jrnl>`__. It also supports embedding `IPython
 Notebooks <http://ipython.org/notebook.html>`__ which can be mighty useful.
 
+For a live demo, please visit `our docs <http://pmorissette.github.io/klink/>`__.
+
 Options
 -------
 
