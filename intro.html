@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Including IPython Notebook &mdash; klink 0.1 documentation</title>
+    <title>A Quick Example &mdash; klink 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/css/klink.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -29,6 +29,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
         
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,500,700' rel='stylesheet' type='text/css'>
     
   </head>
   <body>  
@@ -38,12 +39,10 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="including-ipython-notebook">
-<h1>Including IPython Notebook<a class="headerlink" href="#including-ipython-notebook" title="Permalink to this headline">¶</a></h1>
-<p>With the klink helper function <strong>convertnbs()</strong>, all notebooks will be
-converted to .rst so that they can be included in your docs. This
-includes all output including images. It&#8217;s a very convenient way to
-create Python docs!</p>
+  <div class="section" id="a-quick-example">
+<h1>A Quick Example<a class="headerlink" href="#a-quick-example" title="Permalink to this headline">¶</a></h1>
+<p>Here is a quick example of what it looks like. I am writing this in my
+notebook file by the way (using a Mardown cell).</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="c"># have to comment out the magic IPython functions because of a bug</span>
 <span class="c">#%pylab inline</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -62,9 +61,9 @@ create Python docs!</p>
 <div class="section" id="mardown">
 <h1>Mardown<a class="headerlink" href="#mardown" title="Permalink to this headline">¶</a></h1>
 <p>IPython currently supports markdown cells. These are converted to the
-appropriate .rst type by the klink helper function. The function calls
-ipython&#8217;s nbconvert with the <strong>&#8211;to rst</strong> option. You will need an
-up-to-date version of pandoc for this to work properly.</p>
+appropriate .rst type by the klink helper function (h1, h2, p, etc.).
+The function calls IPython&#8217;s nbconvert with the <strong>&#8211;to rst</strong> option. You
+will need an up-to-date version of pandoc for this to work properly.</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>

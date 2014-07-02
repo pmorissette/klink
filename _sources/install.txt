@@ -6,7 +6,7 @@ Installation
 
 Assuming you have pip installed:
 
-.. code:: bash
+.. code:: sh
 
     $ pip install klink
 
@@ -49,3 +49,25 @@ each one of your notebooks.
 
 Now all you have to do is use the **include** command to insert them into your
 docs.
+
+
+Customization
+-------------
+
+Obviously, some of you will want to customize the theme. The easiest way to
+achieve this is to clone the repo into your _themes folder (create it if it does
+not exist in your docs' source dir). To change the style, I recommend editing
+the LESS files themselves. You will also need lessc to convert from less to css.
+See the css command in the Makefile for an example. 
+
+You will also need to change your conf.py file. The following settings should
+work::
+
+    html_theme = 'klink'
+    html_theme_path ['_themes']
+    html_theme_options = {
+        'github': 'yourname/yourrepo',
+        'analytics_id': 'UA-your-number-here',
+        'logo': 'logo.png'
+    }
+

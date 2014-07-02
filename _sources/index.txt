@@ -1,13 +1,10 @@
-.. klink-demo documentation master file, created by
-   sphinx-quickstart on Tue Jul  1 13:40:27 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+klink - A Simple & Clean Sphinx Theme
+=====================================
 
-klink - A Simple Sphinx Theme
-=============================
-
-Klink is a simple sphinx theme. It is heavily inspired by `jrnl's theme
-<https://github.com/maebert/jrnl>`__. 
+Klink is a **simple** and **clean** theme for creating `Sphinx docs
+<http://sphinx-doc.org/>`__. It is heavily inspired by the beautiful `jrnl theme
+<https://github.com/maebert/jrnl>`__. It also supports embedding `IPython
+Notebooks <http://ipython.org/notebook.html>`__ which can be mighty useful.
 
 Options
 -------
@@ -15,23 +12,26 @@ Options
 Here are the theme options. They should be added to the html_theme_options in
 your **conf.py** file.
 
-    * **github**
-      The github address of the project. The format is name/project
-      (pmorissette/klink).
-    * **logo**
-      The logo file. Assumed to be in _static. Default is logo.png. The logo
-      should be 150x150.
-    * **analytics_id**
-      Your Google Analytics id (usually starts with UA-...)
+* **github**
+    The github address of the project. The format is name/project
+    (pmorissette/klink).
+* **logo**
+    The logo file. Assumed to be in the _static dir. Default is logo.png. The logo
+    should be 150x150.
+* **analytics_id**
+    Your Google Analytics id (usually starts with UA-...)
 
-Python Code
------------
+IPython Notebook Integration
+----------------------------
 
-Here is a quick example on how you would insert a IPython Notebook. Everything
-you see below this paragraph is actually a Notebook that was converted to
-a .rst file for inclusion in this document. Klink's convert_notebooks() does the conversion.  All
-you have to do is include the .rst file. It will have the same name as the
-notebook.
+With the klink helper function :func:`convert_notebooks()
+<klink.convert_notebooks>`, all notebooks will be
+converted to .rst so that they can be included in your docs. This includes all
+output including images. It’s a very convenient way to create Python docs! 
+
+All you have to do is create notebooks within your source directory (same directory
+as your conf.py file). Then, you add a call to klink.convert_notebooks() in your
+conf.py.
 
 .. include:: intro.rst
 

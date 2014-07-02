@@ -31,6 +31,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
         
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,500,700' rel='stylesheet' type='text/css'>
     
   </head>
   <body>  
@@ -45,7 +46,7 @@
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Assuming you have pip installed:</p>
-<div class="code bash highlight-python"><pre>$ pip install klink</pre>
+<div class="code sh highlight-python"><pre>$ pip install klink</pre>
 </div>
 <p>That&#8217;s it.</p>
 </div>
@@ -80,6 +81,25 @@ each one of your notebooks.</p>
 <p>Now all you have to do is use the <strong>include</strong> command to insert them into your
 docs.</p>
 </div>
+<div class="section" id="customization">
+<h2>Customization<a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h2>
+<p>Obviously, some of you will want to customize the theme. The easiest way to
+achieve this is to clone the repo into your _themes folder (create it if it does
+not exist in your docs&#8217; source dir). To change the style, I recommend editing
+the LESS files themselves. You will also need lessc to convert from less to css.
+See the css command in the Makefile for an example.</p>
+<p>You will also need to change your conf.py file. The following settings should
+work:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">html_theme</span> <span class="o">=</span> <span class="s">&#39;klink&#39;</span>
+<span class="n">html_theme_path</span> <span class="p">[</span><span class="s">&#39;_themes&#39;</span><span class="p">]</span>
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;github&#39;</span><span class="p">:</span> <span class="s">&#39;yourname/yourrepo&#39;</span><span class="p">,</span>
+    <span class="s">&#39;analytics_id&#39;</span><span class="p">:</span> <span class="s">&#39;UA-your-number-here&#39;</span><span class="p">,</span>
+    <span class="s">&#39;logo&#39;</span><span class="p">:</span> <span class="s">&#39;logo.png&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -98,6 +118,7 @@ docs.</p>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Installation Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customization">Customization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="klink.html">API</a></li>

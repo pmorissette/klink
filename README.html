@@ -24,8 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="klink 0.1 documentation" href="#" />
-    <link rel="next" title="klink - A Simple &amp; Clean Sphinx Theme" href="" />
+    <link rel="top" title="klink 0.1 documentation" href="index.html" />
          
         <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
         
@@ -79,39 +78,62 @@ output including images. It’s a very convenient way to create Python docs!</p>
 <p>All you have to do is create notebooks within your source directory (same directory
 as your conf.py file). Then, you add a call to klink.convert_notebooks() in your
 conf.py.</p>
-<div class="section" id="a-quick-example">
-<h3>A Quick Example<a class="headerlink" href="#a-quick-example" title="Permalink to this headline">¶</a></h3>
-<p>Here is a quick example of what it looks like. I am writing this in my
-notebook file by the way (using a Mardown cell).</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="c"># have to comment out the magic IPython functions because of a bug</span>
-<span class="c">#%pylab inline</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Assuming you have pip installed:</p>
+<div class="code sh highlight-python"><pre>$ pip install klink</pre>
+</div>
+<p>That&#8217;s it.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>In your docs&#8217; <strong>conf.py</strong> file, add the following:</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">klink</span>
+
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s">&#39;klink&#39;</span>
+<span class="n">html_theme_path</span> <span class="p">[</span><span class="n">klink</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;github&#39;</span><span class="p">:</span> <span class="s">&#39;yourname/yourrepo&#39;</span><span class="p">,</span>
+    <span class="s">&#39;analytics_id&#39;</span><span class="p">:</span> <span class="s">&#39;UA-your-number-here&#39;</span><span class="p">,</span>
+    <span class="s">&#39;logo&#39;</span><span class="p">:</span> <span class="s">&#39;logo.png&#39;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<p>Klink also comes with a useful helper function that allows you to integrate an
+IPython Notebook into a .rst file. It basically converts the Notebook to .rst
+and copies the static data (images, etc) to your _static dir.</p>
+<p>If you have IPython Notebooks that you would like to integrate, use the
+following code to your <strong>conf.py</strong>:</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">klink</span><span class="o">.</span><span class="n">convert_notebooks</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="pynb-result highlight-python"><pre>[-0.81256785 -1.16630768  0.27555802  0.57729188 -0.64691411  0.62288591
-  0.27943851  0.10512695  0.23808598 -1.45293996 -0.24394825 -0.14631097
-  1.56377514 -0.87629984  1.64059433 -0.10259616  0.84435183  0.11718899
- -0.66617413 -0.81800771]</pre>
+<p>Once the conversion is done, you will have a .rst file with the same name as
+each one of your notebooks.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Place your notebooks in your docs&#8217; source dir.</p>
 </div>
+<p>Now all you have to do is use the <strong>include</strong> command to insert them into your
+docs.</p>
 </div>
-<div class="section" id="mardown">
-<h3>Mardown<a class="headerlink" href="#mardown" title="Permalink to this headline">¶</a></h3>
-<p>IPython currently supports markdown cells. These are converted to the
-appropriate .rst type by the klink helper function (h1, h2, p, etc.).
-The function calls IPython&#8217;s nbconvert with the <strong>&#8211;to rst</strong> option. You
-will need an up-to-date version of pandoc for this to work properly.</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="section" id="customization">
+<h2>Customization<a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h2>
+<p>Obviously, some of you will want to customize the theme. The easiest way to
+achieve this is to clone the repo into your _themes folder (create it if it does
+not exist in your docs&#8217; source dir). To change the style, I recommend editing
+the LESS files themselves. You will also need lessc to convert from less to css.
+See the css command in the Makefile for an example.</p>
+<p>You will also need to change your conf.py file. The following settings should
+work:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">html_theme</span> <span class="o">=</span> <span class="s">&#39;klink&#39;</span>
+<span class="n">html_theme_path</span> <span class="p">[</span><span class="s">&#39;_themes&#39;</span><span class="p">]</span>
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;github&#39;</span><span class="p">:</span> <span class="s">&#39;yourname/yourrepo&#39;</span><span class="p">,</span>
+    <span class="s">&#39;analytics_id&#39;</span><span class="p">:</span> <span class="s">&#39;UA-your-number-here&#39;</span><span class="p">,</span>
+    <span class="s">&#39;logo&#39;</span><span class="p">:</span> <span class="s">&#39;logo.png&#39;</span>
+<span class="p">}</span>
 </pre></div>
-</div>
-<div class="pynb-result highlight-python"><pre>&lt;matplotlib.axes.AxesSubplot at 0x7f28246381d0&gt;</pre>
-</div>
-<img alt="_images/intro_4_1.png" class="pynb" src="_images/intro_4_1.png" />
-<div class="toctree-wrapper compound">
-</div>
 </div>
 </div>
 </div>
@@ -123,16 +145,12 @@ will need an up-to-date version of pandoc for this to work properly.</p>
         <aside>
 
             
-            <a href="#" id="logo" title=klink><img class="logo" src="_static/logo.png" width="150px" height="150px" title=klink /></a>
+            <a href="index.html" id="logo" title=klink><img class="logo" src="_static/logo.png" width="150px" height="150px" title=klink /></a>
             
             
             <h2>Documentation</h2>
-            <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ipython-notebook-integration">IPython Notebook Integration</a></li>
-</ul>
-</li>
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="klink.html">API</a></li>
 </ul>
