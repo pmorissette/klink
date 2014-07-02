@@ -42,16 +42,25 @@ def convert_notebooks():
                 data = re.sub('%s' % sdir, '_static', data)
                 f.write(data)
 
-        # add class tags images for css formatting
+        # add special tags
         lines = None
         with open(rst_file, 'r') as f:
             lines = f.readlines()
 
         if lines is not None:
-            for i in range(len(lines)):
+            n = len(lines)
+            i = 0
+            while i < n:
                 line = lines[i]
+                # add class tags to images for css formatting
                 if 'image::' in line:
-                    lines.insert(i + 1, '\t:class: pynb\n')
+                    lines.insert(i + 1, '    :class: pynb\n')
+                    n += 1
+                elif 'parsed-literal::' in line:
+                    lines.insert(i + 1, '    :class: pynb-result\n')
+                    n += 1
+
+                i += 1
 
             with open(rst_file, 'w') as f:
                 f.writelines(lines)
