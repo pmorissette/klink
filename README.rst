@@ -1,3 +1,6 @@
+.. image:: docs/source/_static/logo.png
+
+
 klink - A Simple & Clean Sphinx Theme
 =====================================
 
