@@ -24,11 +24,14 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="top" title="klink 0.1 documentation" href="index.html" />
     <link rel="next" title="klink API" href="klink.html" />
     <link rel="prev" title="klink API" href="klink.html" />
          
         <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+        
+            <link rel="shortcut icon" href="_static/favicon.ico">
         
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,500,700' rel='stylesheet' type='text/css'>
@@ -88,6 +91,8 @@ achieve this is to clone the repo into your _themes folder (create it if it does
 not exist in your docs&#8217; source dir). To change the style, I recommend editing
 the LESS files themselves. You will also need lessc to convert from less to css.
 See the css command in the Makefile for an example.</p>
+<p>You may also want to explore the option of using <strong>git subtree</strong>. Here is a good
+<a class="reference external" href="http://makingsoftware.wordpress.com/2013/02/16/using-git-subtrees-for-repository-separation/">intro tutorial</a>.</p>
 <p>You will also need to change your conf.py file. The following settings should
 work:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">html_theme</span> <span class="o">=</span> <span class="s">&#39;klink&#39;</span>
