@@ -1,4 +1,4 @@
-.. image:: docs/source/_static/logo.png
+.. image:: http://pmorissette.github.io/klink/_static/logo.png
 
 
 klink - A Simple & Clean Sphinx Theme
