@@ -29,8 +29,7 @@ your **conf.py** file.
 IPython Notebook Integration
 ----------------------------
 
-With the klink helper function :func:`convert_notebooks()
-<klink.convert_notebooks>`, all notebooks will be
+With the klink helper function **convert_notebooks()**, all notebooks will be
 converted to .rst so that they can be included in your docs. This includes all
 output including images. It’s a very convenient way to create Python docs! 
 
