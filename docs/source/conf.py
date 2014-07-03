@@ -102,7 +102,7 @@ html_theme = 'klink'
 # documentation.
 html_theme_options = {
     'github': 'pmorissette/klink',
-    'analytics_id': 'UA-52308448-1'
+    'analytics_id': 'UA-52308448-2'
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
