@@ -8,7 +8,7 @@ clean:
 	- rm -rf klink.egg-info
 
 css:
-	lessc --clean-css klink/less/klink.less klink/static/css/klink.css
+	lessc klink/less/klink.less klink/static/css/klink.css
 	- cp klink/static/css/klink.css docs/build/html/_static/css/klink.css
 
 docs: css
