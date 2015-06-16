@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -14,7 +13,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
+        URL_ROOT:    './',
         VERSION:     '0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -37,19 +36,20 @@
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono:400,500,700' rel='stylesheet' type='text/css'>
     
   </head>
-  <body>  
+  <body role="document">  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="installation-guide">
 <h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Assuming you have pip installed:</p>
-<div class="code sh highlight-python"><pre>$ pip install klink</pre>
+<div class="code sh highlight-python"><div class="highlight"><pre>$ pip install klink
+</pre></div>
 </div>
 <p>That&#8217;s it.</p>
 </div>
@@ -59,7 +59,7 @@
 <div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">klink</span>
 
 <span class="n">html_theme</span> <span class="o">=</span> <span class="s">&#39;klink&#39;</span>
-<span class="n">html_theme_path</span> <span class="p">[</span><span class="n">klink</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">klink</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
 <span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">&#39;github&#39;</span><span class="p">:</span> <span class="s">&#39;yourname/yourrepo&#39;</span><span class="p">,</span>
     <span class="s">&#39;analytics_id&#39;</span><span class="p">:</span> <span class="s">&#39;UA-your-number-here&#39;</span><span class="p">,</span>
@@ -120,7 +120,12 @@ work:</p>
             
             
             <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Overview</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#ipython-notebook-integration">IPython Notebook Integration</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#raw-nbconvert-cells">Raw NBConvert Cells</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Installation Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
@@ -137,7 +142,7 @@ work:</p>
                 <li><a href="https://github.com/pmorissette/klink">Github</a></li>
             </ul>
             
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />

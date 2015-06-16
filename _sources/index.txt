@@ -51,7 +51,7 @@ want to have links to other parts of your Sphinx docs.
 .. include:: intro.rst
 
 .. toctree::
-    :hidden: 
+    :hidden:
     :maxdepth: 2
 
     Overview <index>
