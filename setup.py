@@ -9,5 +9,11 @@ setup(
     license='MIT',
     author='Philippe Morissette',
     author_email='morissette.philippe@gmail.com',
-    packages=['klink']
+    packages=['klink'],
+    package_data = {'klink': [
+        'theme.conf',
+        'layout.html',
+        'static/css/klink.css',
+        'static/fonts/*.*',
+    ]},
 )
