@@ -66,7 +66,7 @@ In your docs' **conf.py** file, add the following:
     import klink
 
     html_theme = 'klink'
-    html_theme_path [klink.get_html_theme_path()]
+    html_theme_path = [klink.get_html_theme_path()]
     html_theme_options = {
         'github': 'yourname/yourrepo',
         'analytics_id': 'UA-your-number-here',
@@ -110,7 +110,7 @@ You will also need to change your conf.py file. The following settings should
 work::
 
     html_theme = 'klink'
-    html_theme_path ['_themes']
+    html_theme_path = ['_themes']
     html_theme_options = {
         'github': 'yourname/yourrepo',
         'analytics_id': 'UA-your-number-here',
