@@ -24,11 +24,13 @@ def convert_notebooks():
         print 'processing %s (%s)' % (name, notebook)
 
         # move static files
+        # if notebook contains no images, sdir is not created
         sdir = '%s_files' % name
-        statics = os.listdir(sdir)
-        statics = [os.path.join(sdir, x) for x in statics]
-        [shutil.copy(x, '_static/') for x in statics]
-        shutil.rmtree(sdir)
+        if os.path.isdir(sdir):
+            statics = os.listdir(sdir)
+            statics = [os.path.join(sdir, x) for x in statics]
+            [shutil.copy(x, '_static/') for x in statics]
+            shutil.rmtree(sdir)
 
         # rename static dir in rst file
         rst_file = '%s.rst' % name
