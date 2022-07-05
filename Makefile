@@ -1,6 +1,15 @@
 TMPREPO=/tmp/docs/klink
 
-.PHONY: clean css docs serve pages dist
+.PHONY: clean css docs serve pages dist develop lint fix
+
+develop:
+	python -m pip install -e .[dev]
+
+lint:
+	python -m flake8 klink setup.py docs/source/conf.py
+
+fix:
+	python -m black klink setup.py docs/source/conf.py
 
 clean:
 	- rm -rf build
@@ -17,11 +26,11 @@ docs: css
 
 serve:
 	cd docs/build/html; \
-	python -m SimpleHTTPServer 9090
+	python -m http.server 9090
 
 pages:
 	- rm -rf $(TMPREPO)
-	git clone -b gh-pages https://github.com/pmorissette/klink.git $(TMPREPO)
+	git clone -b gh-pages git@github.com:pmorissette/klink.git $(TMPREPO)
 	rm -rf $(TMPREPO)/*
 	cp -r docs/build/html/* $(TMPREPO)
 	cd $(TMPREPO); \
