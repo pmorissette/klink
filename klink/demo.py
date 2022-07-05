@@ -17,7 +17,7 @@ class TestClass(object):
         name (str): Name arg
         age (int): Age arg
 
-   """
+    """
 
     def __init__(self, name, age):
         self.name = name

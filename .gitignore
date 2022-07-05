@@ -58,3 +58,6 @@ docs/_build/
 
 # notebooks
 docs/source/.ipynb_checkpoints/
+
+# editor
+.vscode
