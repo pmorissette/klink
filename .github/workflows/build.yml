@@ -40,6 +40,7 @@ jobs:
       run: |
         make develop
         python -m pip install -U wheel twine setuptools
+        sudo apt-get install pandoc
         npm i -g less
 
     - name: Lint

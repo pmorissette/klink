@@ -4,6 +4,7 @@ TMPREPO=/tmp/docs/klink
 
 develop:
 	python -m pip install -e .[dev]
+	python -m pip install nbconvert
 
 lint:
 	python -m flake8 klink setup.py docs/source/conf.py

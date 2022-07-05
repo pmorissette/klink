@@ -1,5 +1,13 @@
+import codecs
+import os
 from setuptools import setup
+
 from klink import __version__
+
+
+def local_file(filename):
+    return codecs.open(os.path.join(os.path.dirname(__file__), filename), "r", "utf-8")
+
 
 setup(
     name="klink",
@@ -7,6 +15,7 @@ setup(
     author="Philippe Morissette",
     author_email="morissette.philippe@gmail.com",
     description="Klink is a simple and clean theme for creating Sphinx docs, inspired by jrnl",
+    long_description=local_file("README.rst").read().replace("\r\n", "\n"),
     url="https://github.com/pmorissette/klink",
     license="MIT",
     install_requires=[
