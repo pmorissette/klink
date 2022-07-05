@@ -11,6 +11,7 @@
 
 
 .. parsed-literal::
+   :class: pynb-result
 
     this is a printed line
 
@@ -22,6 +23,7 @@
 
 
 .. parsed-literal::
+   :class: pynb-result
 
                  aapl   msft   yhoo
     Date                           
@@ -43,7 +45,7 @@
 
 .. raw:: html
 
-    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
+    <div class="pynb-result" style="max-height:1000px;max-width:1500px;overflow:auto;">
     <table border="1" class="dataframe">
       <thead>
         <tr style="text-align: right;">
@@ -105,13 +107,15 @@
 
 
 .. parsed-literal::
+   :class: pynb-result
 
     <matplotlib.axes.AxesSubplot at 0x7fbae88b19d0>
 
 
 
 
-.. image:: nb-examples_files/nb-examples_4_1.png
+.. image:: _static/nb-examples_4_1.png
+   :class: pynb
 
 
 .. code:: 
@@ -124,7 +128,7 @@
 
 .. raw:: html
 
-    <div style="max-height:1000px;max-width:1500px;overflow:auto;">
+    <div class="pynb-result" style="max-height:1000px;max-width:1500px;overflow:auto;">
     <table border="1" class="dataframe">
       <thead>
         <tr style="text-align: right;">
