@@ -17,8 +17,9 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.9]
         os: [ubuntu-latest]
+        python-version: [3.9]
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -30,10 +31,16 @@ jobs:
         cache: 'pip'
         cache-dependency-path: 'setup.py'
 
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
     - name: Install dependencies
       run: |
         make develop
         python -m pip install -U wheel twine setuptools
+        npm i -g less
 
     - name: Lint
       run: |

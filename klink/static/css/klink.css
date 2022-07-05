@@ -61,9 +61,9 @@
   left: -1.85714286em;
 }
 .fa-border {
-  padding: .2em .25em .15em;
-  border: solid 0.08em #eeeeee;
-  border-radius: .1em;
+  padding: 0.2em 0.25em 0.15em;
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
 }
 .pull-right {
   float: right;
@@ -72,10 +72,10 @@
   float: left;
 }
 .fa.pull-left {
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 .fa.pull-right {
-  margin-left: .3em;
+  margin-left: 0.3em;
 }
 .fa-spin {
   -webkit-animation: spin 2s infinite linear;
@@ -179,7 +179,7 @@
   font-size: 2em;
 }
 .fa-inverse {
-  color: #ffffff;
+  color: #fff;
 }
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
@@ -1626,7 +1626,7 @@ hr {
 }
 mark {
   background: #ff0;
-  color: #000000;
+  color: #000;
 }
 code,
 kbd,
@@ -1733,7 +1733,7 @@ table {
 body {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  color: #333333;
+  color: #333;
   background: #f7f8f9;
 }
 h1 {
@@ -1758,14 +1758,14 @@ a:active {
   display: none;
 }
 dd {
-  color: #999999;
+  color: #999;
   font-weight: 400;
   max-width: 85%;
 }
 dl.function > dt,
 dl.class > dt,
 dl.method > dt {
-  color: #333333;
+  color: #333;
   font-weight: bold;
 }
 dl tt {
@@ -1782,7 +1782,7 @@ dl.class {
 }
 em.property {
   font-style: normal;
-  color: #999999;
+  color: #999;
 }
 dt > em {
   font-style: normal;
@@ -1790,12 +1790,12 @@ dt > em {
 }
 input {
   background: transparent;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   padding: 2px 5px;
-  color: #777777;
+  color: #777;
   outline: none;
 }
 input:focus {
@@ -1805,7 +1805,7 @@ aside {
   position: fixed;
   top: 25px;
   width: 240px;
-  color: #999999;
+  color: #999;
   padding-left: 20px;
 }
 aside > ul {
@@ -1816,11 +1816,11 @@ aside > ul {
 aside > ul > li {
   margin-bottom: 10px;
   font-size: 18px;
-  color: #777777;
+  color: #777;
 }
 aside > ul > li a:link,
 aside > ul > li a:visited {
-  color: #777777;
+  color: #777;
 }
 aside > ul > li ul {
   margin: 10px 0 0 0;
@@ -1879,7 +1879,7 @@ aside input[type=text] {
   color: white;
   margin: 10px 0px;
   background: #e3e3e3;
-  color: #333333;
+  color: #333;
 }
 .seealso .admonition-title {
   display: none;
@@ -1907,10 +1907,10 @@ aside input[type=text] {
   height: 32px;
 }
 .seealso:before.pull-left {
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 .seealso:before.pull-right {
-  margin-left: .3em;
+  margin-left: 0.3em;
 }
 .seealso .literal,
 .seealso .highlight-note {
@@ -1958,10 +1958,10 @@ aside input[type=text] {
   height: 32px;
 }
 .note:before.pull-left {
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 .note:before.pull-right {
-  margin-left: .3em;
+  margin-left: 0.3em;
 }
 .note .literal,
 .note .highlight-note {
@@ -2009,10 +2009,10 @@ aside input[type=text] {
   height: 32px;
 }
 .warning:before.pull-left {
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 .warning:before.pull-right {
-  margin-left: .3em;
+  margin-left: 0.3em;
 }
 .warning .literal,
 .warning .highlight-note {
@@ -2060,10 +2060,10 @@ aside input[type=text] {
   height: 32px;
 }
 .danger:before.pull-left {
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 .danger:before.pull-right {
-  margin-left: .3em;
+  margin-left: 0.3em;
 }
 .danger .literal,
 .danger .highlight-note {
@@ -2099,7 +2099,7 @@ span.viewcode-link {
   display: block;
   position: absolute;
   right: 0px;
-  font-size: .8em;
+  font-size: 0.8em;
   color: #29b96e;
   padding-right: 10px;
 }
@@ -2117,10 +2117,10 @@ div.body {
   padding-top: 10px;
 }
 div.footer {
-  font-size: .8em;
+  font-size: 0.8em;
   text-align: center;
   margin: 40px 0;
-  color: #999999;
+  color: #999;
 }
 .code-view {
   background: white;
