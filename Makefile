@@ -7,10 +7,10 @@ develop:
 	python -m pip install nbconvert
 
 lint:
-	python -m flake8 klink setup.py docs/source/conf.py
+	python -m ruff klink setup.py docs/source/conf.py
 
 fix:
-	python -m black klink setup.py docs/source/conf.py
+	python -m ruff format klink setup.py docs/source/conf.py
 
 clean:
 	- rm -rf build

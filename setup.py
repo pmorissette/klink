@@ -23,9 +23,7 @@ setup(
     ],
     extras_require={
         "dev": [
-            "black>=20.8b1",
-            "flake8",
-            "flake8-black",
+            "ruff",
         ],
     },
     packages=["klink"],
