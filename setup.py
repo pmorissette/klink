@@ -35,4 +35,10 @@ setup(
             "static/fonts/*.*",
         ]
     },
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Topic :: Software Development :: Libraries",
+        "Programming Language :: Python",
+    ],
+    python_requires=">=3.7",
 )
