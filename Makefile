@@ -7,23 +7,26 @@ develop:
 	python -m pip install nbconvert
 
 lint:
-	python -m ruff klink setup.py docs/source/conf.py
+	python -m isort --check klink setup.py docs/source/conf.py
+	python -m ruff check klink setup.py docs/source/conf.py
+	python -m ruff format --check klink setup.py docs/source/conf.py
 
 fix:
+	python -m isort klink setup.py docs/source/conf.py
 	python -m ruff format klink setup.py docs/source/conf.py
 
 clean:
 	- rm -rf build
 	- rm -rf dist
-	- rm -rf klink.egg-info
 
 css:
 	lessc klink/less/klink.less klink/static/css/klink.css
-	- cp klink/static/css/klink.css docs/build/html/_static/css/klink.css
+	cp klink/static/css/klink.css docs/build/html/_static/css/klink.css
 
-docs: css
+docs: 
 	$(MAKE) -C docs/ clean
 	$(MAKE) -C docs/ html 
+	$(MAKE) css 
 
 serve:
 	cd docs/build/html; \

@@ -1,5 +1,4 @@
 class TestClass(object):
-
     """
     This is a test class. Used for demo purposes.
 

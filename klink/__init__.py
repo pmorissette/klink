@@ -1,7 +1,7 @@
 import os
-from subprocess import call
-import shutil
 import re
+import shutil
+from subprocess import call
 
 
 def convert_notebooks():

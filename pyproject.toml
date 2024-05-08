@@ -1,5 +1,17 @@
+[tool.isort]
+combine_as_imports = true
+include_trailing_comma = true
+line_length = 180
+profile = "black"
+
+default_section = "THIRDPARTY"
+sections = "FUTURE,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+
+known_first_party = "klink"
+
+
 [tool.ruff]
 line-length = 180
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401", "F403"]
