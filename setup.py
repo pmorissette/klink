@@ -23,7 +23,10 @@ setup(
     ],
     extras_require={
         "dev": [
-            "ruff",
+            "isort>=5,<6",
+            "ruff>=0.3,<0.4",
+            "twine",
+            "wheel",
         ],
     },
     packages=["klink"],
