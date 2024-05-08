@@ -18,15 +18,15 @@ fix:
 clean:
 	- rm -rf build
 	- rm -rf dist
-	- rm -rf klink.egg-info
 
 css:
 	lessc klink/less/klink.less klink/static/css/klink.css
 	cp klink/static/css/klink.css docs/build/html/_static/css/klink.css
 
-docs: css
+docs: 
 	$(MAKE) -C docs/ clean
 	$(MAKE) -C docs/ html 
+	$(MAKE) css 
 
 serve:
 	cd docs/build/html; \
