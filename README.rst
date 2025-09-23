@@ -9,7 +9,7 @@
 
 .. image:: https://img.shields.io/pypi/l/klink
     :alt: PyPI - License
-    :target: https://pypi.org/project/klink/
+    :target: https://github.com/pmorissette/klink/blob/master/LICENSE
 
 klink - A Simple & Clean Sphinx Theme
 =====================================
