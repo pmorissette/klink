@@ -3,9 +3,6 @@
 .. image:: https://github.com/pmorissette/klink/workflows/Build%20Status/badge.svg
     :target: https://github.com/pmorissette/klink/actions/
 
-.. image:: https://codecov.io/gh/pmorissette/klink/branch/master/graph/badge.svg
-    :target: https://codecov.io/pmorissette/klink
-
 .. image:: https://img.shields.io/pypi/v/klink
     :alt: PyPI
     :target: https://pypi.org/project/klink/
@@ -13,7 +10,6 @@
 .. image:: https://img.shields.io/pypi/l/klink
     :alt: PyPI - License
     :target: https://pypi.org/project/klink/
-
 
 klink - A Simple & Clean Sphinx Theme
 =====================================
