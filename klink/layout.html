@@ -1,12 +1,8 @@
 {%- extends "basic/layout.html" %}
     {%- block extrahead %}
         {{ super() }}
-        <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
-        {% if favicon %}
-            <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}">
-        {% endif %}
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono:400,500,700' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono:400,500,700" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {%- block relbar1 %}{% endblock %}
@@ -16,7 +12,7 @@
         <aside>
 
             {% if theme_logo %}
-            <a href="{{ pathto('index') }}" id="logo" title={{project}}><img class="logo" src="{{ pathto('_static/' + theme_logo, 1) }}" width="150px" height="150px" title={{project}} /></a>
+            <a href="{{ pathto('index') }}" id="logo" title="{{ project|e }}"><img class="logo" src="{{ pathto('_static/' + theme_logo, 1) }}" width="150" height="150" alt="{{ project|e }}" /></a>
             {% endif %}
             
             {{ toctree() }}

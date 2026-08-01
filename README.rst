@@ -73,10 +73,7 @@ In your docs' **conf.py** file, add the following:
 
 .. code:: python
 
-    import klink
-
     html_theme = 'klink'
-    html_theme_path = [klink.get_html_theme_path()]
     html_theme_options = {
         'github': 'yourname/yourrepo',
         'analytics_id': 'UA-your-number-here',
@@ -91,6 +88,8 @@ If you have IPython Notebooks that you would like to integrate, use the
 following code to your **conf.py**:
 
 .. code:: python
+
+    import klink
 
     klink.convert_notebooks()
 

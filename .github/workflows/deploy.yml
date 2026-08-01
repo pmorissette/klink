@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,48 +14,37 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        python-version: [3.11]
-        node-version: [22.x]
+        python-version: ['3.13']
 
     steps:
-    - uses: actions/checkout@v7
+    - name: Checkout
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v7
+      uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
       with:
         python-version: ${{ matrix.python-version }}
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v7
-      with:
-        node-version: ${{ matrix.node-version }}
+        cache: 'pip'
+        cache-dependency-path: 'pyproject.toml'
 
     - name: Install dependencies
-      run: |
-        make develop
-        python -m pip install -U wheel twine setuptools
-        sudo apt-get install pandoc
-        npm i -g less
+      run: make develop
+
+    - name: Install Pandoc
+      run: sudo apt-get install -y pandoc
 
     - name: Lint
-      run: |
-        make lint
+      run: make lint
 
-    - name: Test - build docs
-      run: |
-        make docs
+    - name: Build docs
+      run: make docs
 
     - name: Package and check
-      run: |
-        python setup.py sdist bdist_wheel
-        python -m twine check dist/*
+      run: make dist
 
     - name: Publish distribution 📦 to PyPI
       if: ${{ startsWith(github.ref, 'refs/tags') }}
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_UN }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PW }}
-      run: |
-        python -m twine upload dist/* --skip-existing || echo "Failed to deploy"
-
-
+      run: python -m twine upload dist/* --skip-existing
