@@ -1,23 +1,20 @@
 TMPREPO=/tmp/docs/klink
 
-.PHONY: clean css docs serve pages dist develop lint fix
+.PHONY: clean css docs serve pages dist upload develop lint fix
 
 develop:
 	python -m pip install -e .[dev]
-	python -m pip install nbconvert
 
 lint:
-	python -m isort --check klink setup.py docs/source/conf.py
-	python -m ruff check klink setup.py docs/source/conf.py
-	python -m ruff format --check klink setup.py docs/source/conf.py
+	python -m ruff check klink docs/source/conf.py
+	python -m ruff format --check klink docs/source/conf.py
 
 fix:
-	python -m isort klink setup.py docs/source/conf.py
-	python -m ruff format klink setup.py docs/source/conf.py
+	python -m ruff check --fix klink docs/source/conf.py
+	python -m ruff format klink docs/source/conf.py
 
 clean:
-	- rm -rf build
-	- rm -rf dist
+	rm -rf build dist klink.egg-info
 
 css:
 	lessc klink/less/klink.less klink/static/css/klink.css
@@ -25,8 +22,7 @@ css:
 
 docs: 
 	$(MAKE) -C docs/ clean
-	$(MAKE) -C docs/ html 
-	$(MAKE) css 
+	$(MAKE) -C docs/ html SPHINXOPTS="-W --keep-going"
 
 serve:
 	cd docs/build/html; \
@@ -43,4 +39,8 @@ pages:
 	git push
 
 dist:
-	python setup.py sdist upload
+	python -m build -s -w
+	python -m twine check dist/*
+
+upload: clean dist
+	python -m twine upload dist/* --skip-existing

@@ -1,17 +1,68 @@
-[tool.isort]
-combine_as_imports = true
-include_trailing_comma = true
-line_length = 180
-profile = "black"
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
 
-default_section = "THIRDPARTY"
-sections = "FUTURE,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+[project]
+name = "klink"
+version = "0.1.10"
+description = "A simple and clean Sphinx theme inspired by jrnl"
+readme = "README.rst"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [
+    { name = "Philippe Morissette", email = "morissette.philippe@gmail.com" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "sphinx>=7.3",
+]
 
-known_first_party = "klink"
+[project.optional-dependencies]
+dev = [
+    "build",
+    "nbconvert",
+    "ruff>=0.5.0,<0.17",
+    "twine",
+]
 
+[project.urls]
+Repository = "https://github.com/pmorissette/klink"
+Homepage = "https://pmorissette.github.io/klink/"
+
+[project.entry-points."sphinx.html_themes"]
+klink = "klink"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/klink",
+    "/LICENSE",
+    "/README.rst",
+    "/pyproject.toml",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["klink"]
 
 [tool.ruff]
 line-length = 180
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401", "F403"]

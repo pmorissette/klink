@@ -1,0 +1,10 @@
+[theme]
+inherit = "basic"
+stylesheets = [
+    "css/klink.css",
+]
+
+[options]
+analytics_id = ""
+logo = "logo.png"
+github = ""

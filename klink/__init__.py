@@ -1,6 +1,7 @@
 import os
 import re
 import shutil
+from pathlib import Path
 from subprocess import call
 
 
@@ -82,6 +83,15 @@ def get_html_theme_path():
     """Returns list of HTML theme paths."""
     cur_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
     return cur_dir
+
+
+def setup(app):
+    app.add_html_theme("klink", Path(__file__).parent)
+
+    return {
+        "parallel_read_safe": True,
+        "parallel_write_safe": True,
+    }
 
 
 VERSION = (0, 1, 10)
