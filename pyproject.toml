@@ -36,7 +36,7 @@ dependencies = [
 dev = [
     "build",
     "nbconvert",
-    "ruff>=0.5.0,<0.17",
+    "ruff>=0.16.0,<0.17",
     "twine",
 ]
 
