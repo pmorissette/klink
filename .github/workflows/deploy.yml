@@ -30,6 +30,9 @@ jobs:
     - name: Install dependencies
       run: make develop
 
+    - name: Install Pandoc
+      run: sudo apt-get install -y pandoc
+
     - name: Lint
       run: make lint
 
@@ -45,4 +48,3 @@ jobs:
         TWINE_USERNAME: ${{ secrets.PYPI_UN }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PW }}
       run: python -m twine upload dist/* --skip-existing
-
