@@ -94,6 +94,6 @@ def setup(app):
     }
 
 
-VERSION = (0, 1, 10)
+VERSION = (0, 1, 11)
 __version__ = ".".join(str(v) for v in VERSION)
 __version_full__ = __version__
