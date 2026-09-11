@@ -1,13 +1,16 @@
 TMPREPO=/tmp/docs/klink
 
-.PHONY: clean css docs serve pages dist upload develop lint fix
+.PHONY: clean css docs serve pages dist upload develop lint fix test
 
 develop:
 	python -m pip install -e .[dev]
 
 lint:
-	python -m ruff check klink docs/source/conf.py
-	python -m ruff format --check klink docs/source/conf.py
+	python -m ruff check klink tests docs/source/conf.py
+	python -m ruff format --check klink tests docs/source/conf.py
+
+test:
+	python -m unittest discover -s tests
 
 fix:
 	python -m ruff check --fix klink docs/source/conf.py
