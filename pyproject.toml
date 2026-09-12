@@ -8,7 +8,7 @@ build-backend = "hatchling.build"
 name = "klink"
 version = "0.1.11"
 description = "A simple and clean Sphinx theme inspired by jrnl"
-readme = "README.rst"
+readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.9"
@@ -33,12 +33,25 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = [
+develop = [
     "build",
+    "bump-my-version",
+    "check-dist",
+    "codespell",
+    "copier",
+    "hatchling",
+    "mdformat",
+    "mdformat-tables>=1",
     "nbconvert",
+    "pytest",
+    "pytest-cov",
     "ruff>=0.16.5,<0.17",
     "twine",
+    "ty",
+    "uv",
+    "wheel",
 ]
+dev = ["klink[develop]"]
 
 [project.urls]
 Repository = "https://github.com/pmorissette/klink"
@@ -47,22 +60,68 @@ Homepage = "https://pmorissette.github.io/klink/"
 [project.entry-points."sphinx.html_themes"]
 klink = "klink"
 
+[tool.bumpversion]
+current_version = "0.1.11"
+commit = true
+tag = true
+commit_args = "-s"
+
+[[tool.bumpversion.files]]
+filename = "klink/__init__.py"
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[tool.pytest.ini_options]
+addopts = ["-vvv", "--junitxml=junit.xml"]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+exclude_also = ["raise NotImplementedError", "if __name__ == .__main__.:", "@(abc\\.)?abstractmethod"]
+fail_under = 50
+
 [tool.hatch.build.targets.sdist]
 include = [
     "/klink",
     "/LICENSE",
-    "/README.rst",
+    "/README.md",
     "/pyproject.toml",
 ]
 
 [tool.hatch.build.targets.wheel]
 packages = ["klink"]
 
+[tool.check-dist]
+present = [
+    "klink/__init__.py",
+    "klink/theme.toml",
+    "klink/layout.html",
+    "klink/static/css/klink.css",
+    "klink/static/fonts/fontawesome-webfont.woff",
+    "klink/static/img/logo.png",
+    "klink/less/klink.less",
+]
+absent = ["base/*", "bt/*", "ffn/*", "tests/*", "docs/*", "TODO.md"]
+
+[tool.check-dist.sdist]
+present = ["LICENSE", "README.md", "pyproject.toml"]
+
 [tool.ruff]
 line-length = 180
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F"]
+extend-select = ["I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["klink"]
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401", "F403"]
