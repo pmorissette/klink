@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "klink"
-version = "0.1.12"
+version = "0.1.13"
 description = "A simple and clean Sphinx theme inspired by jrnl"
 readme = "README.md"
 license = "MIT"
@@ -61,7 +61,7 @@ Homepage = "https://pmorissette.github.io/klink/"
 klink = "klink"
 
 [tool.bumpversion]
-current_version = "0.1.12"
+current_version = "0.1.13"
 commit = true
 tag = true
 commit_args = "-s"

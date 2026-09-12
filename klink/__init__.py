@@ -94,6 +94,6 @@ def setup(app):
     }
 
 
-__version__ = "0.1.12"
+__version__ = "0.1.13"
 VERSION = tuple(int(v) for v in __version__.split("."))
 __version_full__ = __version__
