@@ -1,4 +1,3 @@
-
 A Quick Example
 ~~~~~~~~~~~~~~~
 
@@ -7,18 +6,20 @@ notebook file by the way (using a Mardown cell).
 
 Here is some code + output:
 
-.. code:: python
+.. code:: 
 
     # have to comment out the magic IPython functions because of a bug
     #%pylab inline
     import numpy as np
     import pandas as pd
-.. code:: python
+
+.. code:: 
 
     print np.random.randn(20)
 
+
 .. parsed-literal::
-    :class: pynb-result
+   :class: pynb-result
 
     [-0.81256785 -1.16630768  0.27555802  0.57729188 -0.64691411  0.62288591
       0.27943851  0.10512695  0.23808598 -1.45293996 -0.24394825 -0.14631097
@@ -26,14 +27,15 @@ Here is some code + output:
      -0.66617413 -0.81800771]
 
 
-.. code:: python
+.. code:: 
 
     pd.Series(np.random.randn(100)).plot()
 
 
 
+
 .. parsed-literal::
-    :class: pynb-result
+   :class: pynb-result
 
     <matplotlib.axes.AxesSubplot at 0x7f28246381d0>
 
@@ -41,10 +43,10 @@ Here is some code + output:
 
 
 .. image:: _static/intro_3_1.png
-    :class: pynb
+   :class: pynb
 
 
-                
+
 Raw NBConvert Cells
 -------------------
 
@@ -55,4 +57,3 @@ By the way, :func:`convert_notebooks <klink.__init__.convert_notebooks>` basical
     ipython nbconvert --to rst
 
 on all the notebooks it finds. It also handles special cases and adds special css classes for display formatting purposes. If you plan on using IPython Notebook integration, you will need an up-to-date version of `pandoc <http://johnmacfarlane.net/pandoc/>`_ for this to work properly.
-                

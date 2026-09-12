@@ -1,27 +1,29 @@
-
-.. code:: python
+.. code:: 
 
     import pandas as pd
     import numpy as np
     import ffn
     #%pylab inline
-.. code:: python
+
+.. code:: 
 
     print 'this is a printed line'
 
+
 .. parsed-literal::
-    :class: pynb-result
+   :class: pynb-result
 
     this is a printed line
 
 
-.. code:: python
+.. code:: 
 
     data = ffn.get('aapl,msft,yhoo', start='2010-01-01')
     print data.head()
 
+
 .. parsed-literal::
-    :class: pynb-result
+   :class: pynb-result
 
                  aapl   msft   yhoo
     Date                           
@@ -34,9 +36,10 @@
     [5 rows x 3 columns]
 
 
-.. code:: python
+.. code:: 
 
     data.head()
+
 
 
 
@@ -96,14 +99,15 @@
 
 
 
-.. code:: python
+.. code:: 
 
     data.plot()
 
 
 
+
 .. parsed-literal::
-    :class: pynb-result
+   :class: pynb-result
 
     <matplotlib.axes.AxesSubplot at 0x7fbae88b19d0>
 
@@ -111,13 +115,14 @@
 
 
 .. image:: _static/nb-examples_4_1.png
-    :class: pynb
+   :class: pynb
 
 
-.. code:: python
+.. code:: 
 
     # this is a comment
     data.to_returns().dropna().corr().as_format('.2f')
+
 
 
 

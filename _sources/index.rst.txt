@@ -54,7 +54,6 @@ want to have links to other parts of your Sphinx docs.
     :hidden:
     :maxdepth: 2
 
-    Overview <index>
     Installation Guide <install>
     Examples <examples>
     API <klink>
