@@ -26,7 +26,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Python
-        uses: actions-ext/python/setup@ec67f82b3bd863948308a41ecb9e70547cbb19c7
+        uses: actions-ext/python/setup@c8228d827a81b9f8c808825328af361c45461ba3
         with:
           version: '3.11'
 
@@ -53,7 +53,7 @@ jobs:
         if: always()
 
       - name: Upload coverage
-        uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f # v7.0.0
+        uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
@@ -82,7 +82,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Python
-        uses: actions-ext/python/setup@ec67f82b3bd863948308a41ecb9e70547cbb19c7
+        uses: actions-ext/python/setup@c8228d827a81b9f8c808825328af361c45461ba3
         with:
           version: ${{ matrix.python-version }}
 
