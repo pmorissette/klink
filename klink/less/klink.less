@@ -111,6 +111,7 @@ input {
                 color: @gray2;
             }
             ul {
+                list-style: none;
                 margin: 10px 0 0 0;
                 padding-left: 30px;
                 font-size: 16px;
@@ -314,6 +315,8 @@ div.footer {
     .border-radius(6px);
     font-family: @font2;
     font-size: 0.9em;
+    white-space: pre;
+    overflow-x: auto;
 }
 
 .highlight {
@@ -372,14 +375,17 @@ div.pynb-result {
     }
 }
 
-div#searchbox {
+#searchbox {
+    margin: 0 4px;
     padding-top: 10px;
 }
 
 @media (max-width: 800px) {
     div.documentwrapper {
-        padding-top: 200px;
         margin: 0px 10px;
+    }
+    .klink-has-logo div.documentwrapper {
+        padding-top: 200px;
     }
     h1, .section {
         margin: 0px !important;
